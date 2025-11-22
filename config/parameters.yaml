@@ -1,0 +1,21 @@
+# config/parameters.yaml
+video_processing:
+  model_path: "yolov8n.pt"
+  vehicle_classes: [2, 3, 5, 7]
+  confidence_threshold: 0.5
+  tracking_persistence: 10
+
+coordinate_transformation:
+  reference_points:
+    pixel: [[100, 100], [200, 100], [100, 200], [200, 200]]
+    world: [[0, 0], [10, 0], [0, 50], [10, 50]]
+
+analysis:
+  road_length: 50  # meters
+  analysis_interval: 300  # seconds
+  max_vehicle_speed: 50  # m/s
+  headway_max_threshold: 20  # seconds
+
+output:
+  figure_dpi: 300
+  figure_format: "png"
